@@ -1,0 +1,44 @@
+package calculadora;
+
+import java.util.Scanner;
+
+public class calculadora {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Ingrese el primer número: ");
+        double num1 = input.nextDouble();
+        
+        System.out.println("\nIngrese la operación a realizar (+, -, *, /): ");
+        String operacion = input.next();
+
+        System.out.print("Ingrese el segundo número: ");
+        double num2 = input.nextDouble();
+
+        
+
+        double resultado = 0;
+
+        switch (operacion) {
+            case "+":
+                resultado = num1 + num2;
+                break;
+            case "-":
+                resultado = num1 - num2;
+                break;
+            case "*":
+                resultado = num1 * num2;
+                break;
+            case "/":
+                resultado = num1 / num2;
+                break;
+            default:
+                System.out.println("Operación inválida");
+                break;
+        }
+
+        System.out.println("\nEl resultado es: " + resultado);
+
+        input.close();
+    }
+}
